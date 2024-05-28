@@ -125,5 +125,5 @@ __その他実装したい機能のイメージメモ__
 - __SNSシェア機能:__ 主にX(旧Twitter)に記録をシェア出来るように考えています。
 
 ## ■ 画面遷移図
-Figma
+Figmaで作成
 https://www.figma.com/board/mHAuIrFgtRdW5HYPLX2KS5/%E5%8D%92%E6%A5%AD%E5%88%B6%E4%BD%9C%EF%BC%9A%E6%97%85%E3%81%AE%E8%A8%98%E9%8C%B2%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA?node-id=0-1&t=o7BXyvAhB7PL4MNB-1
