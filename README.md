@@ -136,3 +136,8 @@ __その他実装したい機能のイメージメモ__
 Figmaで作成
 
 https://www.figma.com/design/yhSBHcHjgDVjFg13VeW1H7/%E5%8D%92%E6%A5%AD%E5%88%B6%E4%BD%9C%EF%BC%9A%E6%97%85%E3%81%AE%E7%AE%A1%E7%90%86%E8%A8%98%E9%8C%B2%E3%82%A2%E3%83%97%E3%83%AA?node-id=24-1360&t=xltP0p7Ql6L0iYeD-1
+
+## ■ ER図
+dbdiagramで作成
+
+https://dbdiagram.io/d/Journalip-665b299eb65d9338793ea7b4
