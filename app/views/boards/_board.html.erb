@@ -1,0 +1,8 @@
+<div class="card w-96 my-3 mx-3 bg-base-100 shadow-xl image-full">
+  <div class="card-body">
+    <h2 class="card-title"><%= link_to board.title, board_path(board) %></h2>
+    <p><%= l board.created_at, format: :short %></p>
+    <div class="card-actions justify-end">
+    </div>
+  </div>
+</div>
