@@ -1,15 +1,20 @@
-<%= image_tag "topvisual.jpg", class: "w-6/12" %><br>
+<div class="my-5">
+  <div class="flex justify-center items-center">
+    <div class="md:6/12 min-[320px]:w-1/2">
+    <%= image_tag "topvisual.jpg" %>
+    </div>
+  </div>
+  <div class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
+    <h2>旅からあなたの価値観を見つけ出そう</h2>
+  </div>
+</div>
 
-<h1 class="text-3xl font-bold">
-    旅からあなたの価値観を見つけ出そう
-</h1>
-<br><br>
-
-<h3>振り返りを助ける4つの項目</h3>
-<%# ここに振り返り項目画像を追加する　%>
-<br>
-<h3>最新記事</h3>
-<%# ここにここに最新記事６つ表示する　%>
-<br><br>
-<%= link_to 'もっと見る', '#', class: "btn" %>
-<%= link_to '書いてみる', '#', class: "btn" %>
+    <h3 class="mb-4 text-center text-gray-800 md:mb-8 lg:text-2xl">振り返りを助ける4つの項目</h3><br><br>
+<%# ここに振り返り項目画像を追加する %>
+    <br>
+    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">最新記事</h2><br><br>
+<%# ここにここに最新記事６つ表示する %>
+<div class="flex justify-center my-24">
+  <%= link_to 'もっと見る', boards_path, class: "btn" %>
+  <%= link_to '書いてみる', '#', class: "btn ml-3" %>
+</div>
