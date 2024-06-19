@@ -1,0 +1,12 @@
+
+<h2 style="display: inline;"><%= @board.title %></h2>
+<ul>
+<%# ユーザーネーム表示%>
+<li><%= l @board.created_at, format: :long %></li>
+</ul>
+<p><%= simple_format(@board.opinion) %></p>
+<p><%= simple_format(@board.background) %></p>
+<p><%= simple_format(@board.emotion) %></p>
+<p><%= simple_format(@board.value) %></p>
+
+<%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
