@@ -17,7 +17,6 @@
 <% if @boards.present? %>
   <div class="grid grid-cols-3 grid-rows-auto gap-5 px-24">
   <% @boards.each do |board| %>
-    <%# render 'boards/board', locals: { board: board } %>
     <%= render partial: 'boards/board', locals: { board: board } %>
   <% end %>
   </div>
