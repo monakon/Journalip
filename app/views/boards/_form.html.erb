@@ -1,0 +1,23 @@
+<%= form_with model: @board do |f| %>
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "border-solid border-2 rounded border-slate-400" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :opinion, class: "form-label" %>
+    <%= f.text_area :opinion, class: "border-solid border-2 rounded border-slate-400" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :background, class: "form-label" %>
+    <%= f.text_area :background, class: "border-solid border-2 rounded border-slate-400" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :emotion, class: "form-label" %>
+    <%= f.text_field :emotion, class: "border-solid border-2 rounded border-slate-400" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :value, class: "form-label" %>
+    <%= f.text_field :value, class: "border-solid border-2 rounded border-slate-400" %>
+  </div>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
