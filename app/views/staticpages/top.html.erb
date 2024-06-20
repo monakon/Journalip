@@ -14,7 +14,16 @@
     <br>
     <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">最新記事</h2><br><br>
 <%# ここにここに最新記事６つ表示する %>
+<% if @boards.present? %>
+  <div class="grid grid-cols-3 grid-rows-auto gap-5 px-24">
+  <% @boards.each do |board| %>
+    <%= render partial: 'boards/board', locals: { board: board } %>
+  <% end %>
+  </div>
+<% else %>
+    <p><%= 記事がありません。%></p>
+<% end %>
 <div class="flex justify-center my-24">
   <%= link_to 'もっと見る', boards_path, class: "btn" %>
-  <%= link_to '書いてみる', '#', class: "btn ml-3" %>
+  <%= link_to '書いてみる', new_board_path, class: "btn ml-3" %>
 </div>
