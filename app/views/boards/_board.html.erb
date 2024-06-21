@@ -2,7 +2,7 @@
 <div class="flex justify-center items-center">
 <div class="card w-96 my-3 mx-3 bg-base-100 shadow-xl image-full">
   <div class="card-body">
-    <h2 class="card-title"><%= link_to board.title, board_path(board) %></h2>
+    <h2 class="card-title text-2xl"><%= link_to board.title, board_path(board) %></h2>
     <p><%= board.user.name %></p>
     <p><%= l board.created_at, format: :short %></p>
   <% if current_user && current_user.own?(board) %>

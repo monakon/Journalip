@@ -1,12 +1,35 @@
+<div class="container">
+<div class="px-4">
+<h3 class="my-6 text-2xl"><%= "#{@board.title}" %></h3>
 
-<h2 style="display: inline;"><%= @board.title %></h2>
 <ul>
-<%# ユーザーネーム表示%>
-<li><%= l @board.created_at, format: :long %></li>
-</ul>
-<p><%= simple_format(@board.opinion) %></p>
-<p><%= simple_format(@board.background) %></p>
-<p><%= simple_format(@board.emotion) %></p>
-<p><%= simple_format(@board.value) %></p>
+<li><div class="inline-flex">
+<%= '投稿者:' %>
+<%= @board.user.name %>
+</div></li>
+
+<li><div class="inline-flex mb-6">
+<%= '投稿日時:' %>
+<%= l @board.created_at, format: :long %>
+</div></li>
+
+<p class="mb-1"><%= 'どんな旅でしたか？' %></p>
+<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.opinion) %>
+</div>
+<p class="mb-1"><%= 'その意見を選んだ背景はなんですか？' %></p>
+<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.background) %>
+</div>
+<p class="mb-1"><%= 'そこにはどんな感情が紐づいていますか？' %></p>
+<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.emotion) %>
+</div>
+<p class="mb-1"><%= 'そこから見えるあなたの大切にしている価値観は？' %></p>
+<div class="w-96 h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.value) %>
+</div>
 
 <%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
+</div>
+</div>

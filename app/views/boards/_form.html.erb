@@ -1,23 +1,23 @@
 <%= form_with model: @board do |f| %>
   <div class="my-3">
-    <%= f.label :title, class: "form-label" %>
-    <%= f.text_field :title, class: "border-solid border-2 rounded border-slate-400" %>
+    <p><%= f.label :title, 'その旅でどんなことが気になりましたか?', class: "form-label" %></p>
+    <%= f.text_field :title, class: "w-96 border-solid border-2 rounded border-slate-400" %>
   </div>
   <div class="my-3">
-    <%= f.label :opinion, class: "form-label" %>
-    <%= f.text_area :opinion, class: "border-solid border-2 rounded border-slate-400" %>
+    <p><%= f.label :opinion, 'なぜそれが気になったのですか?', class: "form-label" %></p>
+    <%= f.text_area :opinion, class: "w-96 h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）大阪ではエスカレータは右に並ぶ' %>
   </div>
   <div class="my-3">
-    <%= f.label :background, class: "form-label" %>
-    <%= f.text_area :background, class: "border-solid border-2 rounded border-slate-400" %>
+    <p><%= f.label :background, 'その意見に関するどのような経験がありますか?', class: "form-label" %></p>
+    <%= f.text_area :background, class: "w-96 h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）エスカレータで並ぶ時は世界共通で左だと思っていた' %>
   </div>
   <div class="my-3">
-    <%= f.label :emotion, class: "form-label" %>
-    <%= f.text_field :emotion, class: "border-solid border-2 rounded border-slate-400" %>
+    <p><%= f.label :emotion, 'それらの意見や経験にどのような感情が紐づいていますか?', class: "form-label" %></p>
+    <%= f.text_field :emotion, class: "w-96 border-solid border-2 rounded border-slate-400", placeholder: '例）驚き 面白い' %>
   </div>
   <div class="my-3">
-    <%= f.label :value, class: "form-label" %>
-    <%= f.text_field :value, class: "border-solid border-2 rounded border-slate-400" %>
+    <p><%= f.label :value, 'そこから見えるあなたが大切にしていることは?', class: "form-label" %></p>
+    <%= f.text_area :value, class: "w-96 h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）新しいことを知った時に面白いと思える' %>
   </div>
-  <%= f.submit class: "btn btn-primary"%>
+  <%= f.submit '投稿', class: "btn btn-primary"%>
 <% end %>
