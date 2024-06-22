@@ -13,19 +13,19 @@
 <%= l @board.created_at, format: :long %>
 </div></li>
 
-<p class="mb-1"><%= 'どんな旅でしたか？' %></p>
+<p class="mb-1"><%= 'それが気になった理由' %></p>
 <div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.opinion) %>
 </div>
-<p class="mb-1"><%= 'その意見を選んだ背景はなんですか？' %></p>
+<p class="mb-1"><%= 'その意見を選んだ背景' %></p>
 <div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.background) %>
 </div>
-<p class="mb-1"><%= 'そこにはどんな感情が紐づいていますか？' %></p>
+<p class="mb-1"><%= 'そこには紐づく感情' %></p>
 <div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.emotion) %>
 </div>
-<p class="mb-1"><%= 'そこから見えるあなたの大切にしている価値観は？' %></p>
+<p class="mb-1"><%= 'そこから見えるあなたの大切にしている価値観' %></p>
 <div class="w-96 h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.value) %>
 </div>
