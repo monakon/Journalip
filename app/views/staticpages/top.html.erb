@@ -1,0 +1,32 @@
+<div class="mb-5">
+  <div class="flex justify-center items-center">
+    <div class="md:6/12 min-[320px]:w-1/2">
+    <%= image_tag "topvisual.jpg" %>
+    </div>
+  </div>
+  <div class="my-10 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
+    <h2 class="lg:text-4xl mb-24">旅からあなたの価値観を見つけ出そう</h2>
+  </div>
+</div>
+
+    <h4 class="text-center text-gray-800 font-bold mb-4 md:mb-2 text-xl">あなたが大事にしていることはなんですか？</h4>
+    <article class="flex justify-center items-center text-xs md:text-base">
+    <p>そう聞かれた時に、うまく言葉にならなかった経験はありませんか？<br>
+    Jornalipは旅の思い出を通して、あなたらしさを言語化する練習を手伝います</p>
+    </article>
+
+    <h2 class="mt-24 text-center text-2xl font-bold text-gray-800 mb-8 text-3xl">最新記事</h2>
+<%# ここにここに最新記事６つ表示する %>
+<% if @boards.present? %>
+  <div class="flex-wrap px-24 md:grid grid-cols-3 grid-rows-auto gap-5">
+  <% @boards.each do |board| %>
+    <%= render partial: 'boards/board', locals: { board: board } %>
+  <% end %>
+  </div>
+<% else %>
+    <p><%= '記事がありません' %></p>
+<% end %>
+<div class="flex justify-center my-24">
+  <%= link_to 'もっと見る', boards_path, class: "btn" %>
+  <%= link_to '書いてみる', new_board_path, class: "btn ml-3" %>
+</div>

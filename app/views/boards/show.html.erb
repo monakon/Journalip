@@ -1,0 +1,35 @@
+<div class="container">
+<div class="px-4">
+<h3 class="my-6 text-2xl"><%= "#{@board.title}" %></h3>
+
+<ul>
+<li><div class="inline-flex">
+<%= '投稿者:' %>
+<%= @board.user.name %>
+</div></li>
+
+<li><div class="inline-flex mb-6">
+<%= '投稿日時:' %>
+<%= l @board.created_at, format: :long %>
+</div></li>
+
+<p class="mb-1"><%= 'それが気になった理由' %></p>
+<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.opinion) %>
+</div>
+<p class="mb-1"><%= 'その意見を選んだ背景' %></p>
+<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.background) %>
+</div>
+<p class="mb-1"><%= 'そこには紐づく感情' %></p>
+<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.emotion) %>
+</div>
+<p class="mb-1"><%= 'そこから見えるあなたの大切にしている価値観' %></p>
+<div class="w-96 h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<%= simple_format(@board.value) %>
+</div>
+
+<%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
+</div>
+</div>
