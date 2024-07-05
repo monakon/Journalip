@@ -1,4 +1,4 @@
-# [Jornalip]
+# [Journalip]
 
 ## ■サービス概要
 
