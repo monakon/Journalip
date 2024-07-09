@@ -2,6 +2,10 @@
 <div class="px-4">
 <h3 class="my-6 text-2xl"><%= "#{@board.title}" %></h3>
 
+<% if @board.board_image.present? %>
+    <%= image_tag @board.board_image_url, class: "object-contain" %>
+<% end %>
+
 <ul>
 <li><div class="inline-flex">
 <%= '投稿者:' %>
