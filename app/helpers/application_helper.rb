@@ -18,7 +18,7 @@ module ApplicationHelper
       reverse: true,
       separator: '|',   #Webサイト名とページタイトルを区切るために使用されるテキスト
       description: 'Journalipで価値観を見つけよう',
-      # keywords: 'ページキーワード',   #キーワードを「,」区切りで設定する
+      keywords: 'Journalip,journalip',  #キーワードを「,」区切りで設定する
       canonical: request.original_url,   #優先するurlを指定する
       # noindex: ! Rails.env.production?,
       icon: [                    #favicon、apple用アイコンを指定する
@@ -40,6 +40,5 @@ module ApplicationHelper
         image: image_url('Xcard.png'),
       }
     }
-
   end
 end
