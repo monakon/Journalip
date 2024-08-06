@@ -8,6 +8,10 @@
 
 <ul>
 <li><div class="inline-flex">
+<%= '訪れた場所:' %>
+<%= @board.place %>
+</div></li>
+<li><div class="inline-flex">
 <%= '投稿者:' %>
 <%= @board.user.name %>
 </div></li>
@@ -33,6 +37,42 @@
 <div class="w-96 h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.value) %>
 </div>
+
+<%#　訪れた場所に入力がある場合に地図を表示する　%>
+<% if @board.place.present? %>
+  <div id="map" class="h-72 w-full md:w-9/12"></div>
+
+<script>
+  // 地図を表示する関数
+  function displayMap() {
+    let location = {lat: <%= @board.latitude %>, lng: <%= @board.longitude %>};
+    console.log(location);
+    const mapOptions = {
+    center: location,
+    zoom: 13,
+    streetViewControl: false, // ストリートビューのボタン非表示
+    fullscreenControl: false, // フルスクリーンボタン非表示
+    mapTypeControl: false, // 地図、航空写真のボタン非表示
+  };
+
+  const mapDiv = document.getElementById('map');
+  const map = new google.maps.Map(mapDiv, mapOptions);
+
+  const markerOptions = {
+    position: location,
+    map: map
+  };
+  const marker = new google.maps.Marker(markerOptions)
+  }
+
+  // Google Maps APIロード後に呼び出されるコールバック関数
+  function initMap() {
+    console.log("Google Maps APIが読み込まれました。");
+    displayMap();
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
+<% end %>
 
 <%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
 </div>
