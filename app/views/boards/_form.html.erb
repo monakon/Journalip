@@ -1,5 +1,9 @@
 <%= form_with model: @board do |f| %>
   <div class="my-3">
+    <p><%= f.label :place, '訪れた場所', class: "form-label" %></p>
+    <%= f.text_field :place, id: "Place", class: "w-96 border-solid border-2 rounded border-slate-400", placeholder: '例）国、県、市' %>
+  </div>
+  <div class="my-3">
     <div>
       <%= f.label :board_image %>
       <%= f.file_field :board_image, class: "form-control", accept: 'image/*' %>
@@ -11,6 +15,7 @@
         </div>
       <% end %>
     </div>
+  <div class="my-3">
     <p><%= f.label :title, '旅で印象に残ったこと', class: "form-label" %></p>
     <%= f.text_field :title, class: "w-96 border-solid border-2 rounded border-slate-400", placeholder: '例）大阪での発見' %>
   </div>
@@ -32,3 +37,5 @@
   </div>
   <%= f.submit '投稿', class: "btn btn-primary"%>
 <% end %>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAP_API_KEY"] %>&libraries=places&callback=initialize"></script>
