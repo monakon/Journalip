@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'mypage'
     end
   end
+  resource :profiles
 
   post "oauth/callback", to: "oauths#callback"
   get "oauth/callback", to: "oauths#callback"
