@@ -1,9 +1,9 @@
 <div class="container">
-<div class="px-4">
-<h3 class="my-6 text-2xl"><%= "#{@board.title}" %></h3>
+  <div class="px-5 mb-24 md:px-32 lg:px-52">
+    <h3 class="my-6 text-2xl"><%= "#{@board.title}" %></h3>
 
 <% if @board.board_image.present? %>
-    <%= image_tag @board.board_image_url, class: "object-contain" %>
+    <%= image_tag @board.board_image_url, class: "object-contain w-full" %>
 <% end %>
 
 <ul>
@@ -20,27 +20,28 @@
 <%= '投稿日時:' %>
 <%= l @board.created_at, format: :long %>
 </div></li>
+</ul>
 
 <p class="mb-1"><%= 'なぜそれが特に印象に残ったのですか?' %></p>
-<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<div class="w-full mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.opinion) %>
 </div>
 <p class="mb-1"><%= 'そのことに関連する自分の経験や背景' %></p>
-<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<div class="w-full mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.background) %>
 </div>
 <p class="mb-1"><%= 'その経験を通して、どんな感情や気持ちが湧きましたか?' %></p>
-<div class="w-96 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<div class="w-full mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.emotion) %>
 </div>
 <p class="mb-1"><%= 'この経験からあなたが学んだことや、重要だと思うことは?' %></p>
-<div class="w-96 h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
+<div class="w-full h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.value) %>
 </div>
 
 <%#　訪れた場所に入力がある場合に地図を表示する　%>
 <% if @board.place.present? %>
-  <div id="map" class="h-72 w-full md:w-9/12"></div>
+  <div id="map" class="h-60 w-full"></div>
 
 <script>
   // 地図を表示する関数
@@ -73,7 +74,8 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
 <% end %>
-
-<%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
+  <div class="flex justify-center mt-10">
+  <%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
+  </div>
 </div>
 </div>
