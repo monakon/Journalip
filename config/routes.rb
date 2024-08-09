@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'staticpages#top'
 
-  resources :users, only: %i[new create]
+  resources :users, only: %i[new create destroy]
   resources :boards do
     collection do
       get 'mypage'
