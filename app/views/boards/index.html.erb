@@ -1,8 +1,12 @@
-<div class="flex justify-center items-center">
-<h3 class="lg:text-2xl my-10"><%= 'みんなの記事一覧' %></h3>
-</div>
-<% if @boards.present? %>
+<div>
+  <div class="px-10 mb-24">
+  <h3 class="lg:text-2xl lg:px-14 my-10"><%= 'みんなの記事一覧' %></h3>
+    <% if @boards.present? %>
+    <div class="flex-wrap sm:px-20 sm:grid grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-5">
       <%= render @boards %>
+    </div>
     <% else %>
       <div class="mb-3">掲示板がありません</div>
     <% end %>
+  </div>
+</div>

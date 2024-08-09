@@ -1,21 +1,25 @@
-<div class="py-6 sm:py-6 lg:py-2">
-  <div class="mx-auto py-3">
-  <h3 class="text-center lg:text-2xl my-10"><%= 'プロフィール' %></h3>
-    <div class="m-auto pt-10 text-center"><%= @current_user.name %></div>
-    <div class="m-auto pt-2 pb-5 text-center"><%= link_to 'プロフィール編集', profiles_path %></div>
+<div class="sm:px-20 py-6 sm:py-6 lg:py-2">
+  <div class="py-3 px-6">
+  <h3 class="text-1xl lg:text-2xl mb-2"><%= 'プロフィール' %></h3>
+    <div class="items-center px-5 py-5 flex gap-2 md:gap-5 bg-white border border-white rounded-lg">
+      <div class="text-lg"><%= '表示名' %></div>
+      <div class="text-slate-700"><%= @current_user.name %></div>
+      <div class="ml-auto md:mr-5"><%= link_to 'みる', profiles_path %></div>
+    </div>
   </div>
 </div>
 
-<div class="py-3 sm:py-8 lg:py-3">
-  <div class="mx-auto py-3">
-      <h3 class="text-center lg:text-2xl my-10"><%= '自分の記事一覧' %></h3>
+<div class="px-4 py-1 sm:py-8 lg:py-3">
+  <h3 class="px-2 sm:pl-24 lg:text-2xl my-2"><%= '自分の記事一覧' %></h3>
+
     <% if @boards.present? %>
+    <div class="flex-wrap sm:px-20 sm:grid grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-5">
       <%= render @boards %>
+    </div>
     <% else %>
       <div class="m-auto pt-10 pb-20 text-center">掲示板がありません</div>
     <% end %>
     <div class="flex justify-center">
     <%= link_to '投稿する', new_board_path, class: 'btn'%>
     </div>
-  </div>
 </div>
