@@ -16,15 +16,15 @@
     <% end %>
   </div>
   <div class="my-5">
-    <p><%= f.label :title, '旅で印象に残ったこと', class: "form-label" %></p>
+    <p><%= f.label :title, '旅で印象に残ったこと（タイトル）', class: "form-label" %></p>
     <%= f.text_field :title, class: "w-full border-solid border-2 rounded border-slate-400", placeholder: '例）大阪での発見' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :opinion, 'なぜそれが特に印象に残ったのですか?', class: "form-label" %></p>
+    <p><%= f.label :opinion, '印象に残った具体的な内容', class: "form-label" %></p>
     <%= f.text_area :opinion, class: "w-full h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）大阪ではエスカレータは右に並ぶ' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :background, 'そのことに関連する自分の経験や背景を教えてください', class: "form-label" %></p>
+    <p><%= f.label :background, '印象に残った理由（過去の経験や知識）', class: "form-label" %></p>
     <%= f.text_area :background, class: "w-full h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）エスカレータで並ぶ時は世界共通で左だと思っていた' %>
   </div>
   <div class="my-5">
@@ -32,7 +32,7 @@
     <%= f.text_field :emotion, class: "w-full border-solid border-2 rounded border-slate-400", placeholder: '例）驚き 面白い' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :value, 'この経験からあなたが学んだことや、重要だと思うことは?', class: "form-label" %></p>
+    <p><%= f.label :value, 'この経験からあなたが学んだことや、重要だと思うこと', class: "form-label" %></p>
     <%= f.text_area :value, class: "w-full h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）新しいことを知った時に面白いと思える' %>
   </div>
   <div class="flex justify-center mt-10">
