@@ -22,11 +22,11 @@
 </div></li>
 </ul>
 
-<p class="mb-1"><%= 'なぜそれが特に印象に残ったのですか?' %></p>
+<p class="mb-1"><%= '印象に残った具体的な内容' %></p>
 <div class="w-full mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.opinion) %>
 </div>
-<p class="mb-1"><%= 'そのことに関連する自分の経験や背景' %></p>
+<p class="mb-1"><%= '印象に残った理由（過去の経験や知識）' %></p>
 <div class="w-full mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.background) %>
 </div>
@@ -34,7 +34,7 @@
 <div class="w-full mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.emotion) %>
 </div>
-<p class="mb-1"><%= 'この経験からあなたが学んだことや、重要だと思うことは?' %></p>
+<p class="mb-1"><%= 'この経験からあなたが学んだことや、重要だと思うこと' %></p>
 <div class="w-full h-14 mb-6 py-1 px-1 border-solid border-2 rounded border-slate-400">
 <%= simple_format(@board.value) %>
 </div>
