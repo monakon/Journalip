@@ -28,6 +28,6 @@
 
   <div class="flex justify-center py-24">
     <%= link_to 'もっと見る', boards_path, class: "btn" %>
-    <%= link_to '書いてみる', new_board_path, class: "btn ml-3" %>
+    <%= link_to '書いてみる', new_board_path, data: { turbo: false }, class: "btn ml-3" %>
   </div>
 </div>
