@@ -41,7 +41,8 @@ class BoardsController < ApplicationController
   end
 
   def mypage
-    @boards = Board.includes(:user).where(user_id: current_user.id)
+    # ログインユーザの投稿を取得
+    @boards = current_user.boards
   end
 
   private
