@@ -6,10 +6,10 @@
     <%# end %>
     <!-- Desktop Menu -->
     <nav class="text-xs md:flex md:ml-auto flex-nowrap items-center justify-center">
-      <%= link_to 'マイページ', mypage_boards_path, class: "mr-4 hover:text-gray-900" %>
-      <%= link_to '投稿', new_board_path, data: { turbo: false }, class: "mr-4 hover:text-gray-900" %>
-      <%= link_to '一覧', boards_path, class: "mr-4 hover:text-gray-900" %>
-      <%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete }, class: "hover:text-gray-900" %>
+      <%= link_to 'マイページ', mypage_boards_path, class: "mr-4 hover:font-bold" %>
+      <%= link_to '投稿', new_board_path, data: { turbo: false }, class: "mr-4 hover:font-bold" %>
+      <%= link_to '一覧', boards_path, class: "mr-4 hover:font-bold" %>
+      <%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete }, class: "hover:font-bold" %>
     </nav>
 
   </div>

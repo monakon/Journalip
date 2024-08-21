@@ -11,7 +11,8 @@
       <%= f.label :password, class: "inline-block text-sm" %>
       <%= f.password_field :password, class: "w-full rounded border px-3 py-2" %>
     </div>
-    <%= f.submit "ログイン", class: "btn btn-primary" %>
+    <%= f.submit "ログイン", class: "btn" %>
+    <div class="border-b my-2"></div>
 
     <div>
       <%= link_to auth_at_provider_path(provider: :google), class: "btn w-full text-gray-900" do %>
@@ -25,7 +26,9 @@
       <% end %>
     </div>
 
-<%= link_to 'はじめての方はこちら', new_user_path %>
+  <div class="border-b my-2"></div>
+
+<%= link_to 'はじめての方はこちら', new_user_path, class: "text-center" %>
 <%# link_to 'パスワードをお忘れの方はこちら', '#' %>
 <% end %>
 </div>

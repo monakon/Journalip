@@ -1,12 +1,12 @@
 <div class="md:px-32 lg:px-52">
 <%= form_with model: @board do |f| %>
   <div class="my-5">
-    <p><%= f.label :place, '訪れた場所', class: "form-label" %></p>
-    <%= f.text_field :place, id: "Place", class: "w-full border-solid border-2 rounded border-slate-400", placeholder: '例）国、県、市' %>
+    <p><%= f.label :place, '訪れた場所', class: "font-bold" %></p>
+    <%= f.text_field :place, id: "Place", class: "w-full border-solid border rounded border-slate-400 mt-2", placeholder: '例）国、県、市' %>
   </div>
   <div class="my-5">
-    <%= f.label :board_image %>
-    <%= f.file_field :board_image, class: "form-control", accept: 'image/*' %>
+    <%= f.label :board_image, '添付したい画像', class: "font-bold" %>
+    <%= f.file_field :board_image, class: "form-control mt-2", accept: 'image/*' %>
     <%= f.hidden_field :board_image_cache %>
 
     <% if board.board_image.present? %>
@@ -16,24 +16,24 @@
     <% end %>
   </div>
   <div class="my-5">
-    <p><%= f.label :title, '旅で印象に残ったこと（タイトル）', class: "form-label" %></p>
-    <%= f.text_field :title, class: "w-full border-solid border-2 rounded border-slate-400", placeholder: '例）大阪での発見' %>
+    <p><%= f.label :title, '旅で印象に残ったこと（タイトル）', class: "font-bold" %></p>
+    <%= f.text_field :title, class: "w-full border-solid border rounded border-slate-400 mt-2", placeholder: '例）大阪での発見' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :opinion, '印象に残った具体的な内容', class: "form-label" %></p>
-    <%= f.text_area :opinion, class: "w-full h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）大阪ではエスカレータは右に並ぶ' %>
+    <p><%= f.label :opinion, '印象に残った具体的な内容', class: "font-bold" %></p>
+    <%= f.text_area :opinion, class: "w-full h-14 border-solid border rounded border-slate-400 mt-2", placeholder: '例）大阪ではエスカレータは右に並ぶ' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :background, '印象に残った理由（過去の経験や知識）', class: "form-label" %></p>
-    <%= f.text_area :background, class: "w-full h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）エスカレータで並ぶ時は世界共通で左だと思っていた' %>
+    <p><%= f.label :background, '印象に残った理由（過去の経験や知識）', class: "font-bold" %></p>
+    <%= f.text_area :background, class: "w-full h-14 border-solid border rounded border-slate-400 mt-2", placeholder: '例）エスカレータで並ぶ時は世界共通で左だと思っていた' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :emotion, 'その経験を通して、どんな感情や気持ちが湧きましたか?', class: "form-label" %></p>
-    <%= f.text_field :emotion, class: "w-full border-solid border-2 rounded border-slate-400", placeholder: '例）驚き 面白い' %>
+    <p><%= f.label :emotion, 'その経験を通して、どんな感情や気持ちが湧きましたか?', class: "font-bold" %></p>
+    <%= f.text_field :emotion, class: "w-full border-solid border rounded border-slate-400 mt-2", placeholder: '例）驚き 面白い' %>
   </div>
   <div class="my-5">
-    <p><%= f.label :value, 'この経験からあなたが学んだことや、重要だと思うこと', class: "form-label" %></p>
-    <%= f.text_area :value, class: "w-full h-14 border-solid border-2 rounded border-slate-400", placeholder: '例）新しいことを知った時に面白いと思える' %>
+    <p><%= f.label :value, 'この経験からあなたが学んだことや、重要だと思うこと', class: "font-bold" %></p>
+    <%= f.text_area :value, class: "w-full h-14 border-solid border rounded border-slate-400 mt-2", placeholder: '例）新しいことを知った時に面白いと思える' %>
   </div>
   <div class="flex justify-center mt-10">
     <%= f.submit '投稿', class: "btn"%>
