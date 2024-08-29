@@ -84,7 +84,7 @@ Rails.application.config.sorcery.configure do |config|
   config.external_providers = [:google]
   config.google.key = ENV['GOOGLE_CLIENT_ID']
   config.google.secret = ENV['GOOGLE_CLIENT_SECRET']
-  config.google.callback_url = "https://journalip.fly.dev/oauth/callback?provider=google"
+  config.google.callback_url = "https://journalip.com/oauth/callback?provider=google"
   config.google.user_info_mapping = { email: "email", name: "name" }
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
