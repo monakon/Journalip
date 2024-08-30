@@ -14,13 +14,12 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'Journalip',
-      title: 'Journalip',
+      title: '',
       reverse: true,
       separator: '|',   #Webサイト名とページタイトルを区切るために使用されるテキスト
-      description: 'Journalipで価値観を見つけよう',
-      keywords: 'Journalip,journalip',  #キーワードを「,」区切りで設定する
+      description: 'Journalipで旅の思い出を振り返ろう',
+      keywords: '旅行, 価値観',  #キーワードを「,」区切りで設定する
       canonical: request.original_url,   #優先するurlを指定する
-      # noindex: ! Rails.env.production?,
       icon: [                    #favicon、apple用アイコンを指定する
         { href: image_url('icon.png') },
         { href: image_url('icon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
@@ -28,7 +27,7 @@ module ApplicationHelper
       og: {
         site_name: 'Journalip',
         title: 'Journalip',
-        description: 'Journalipで価値観を見つけよう',
+        description: :description,
         type: 'website',
         url: request.original_url,
         image: image_url('Xcard.png'),
