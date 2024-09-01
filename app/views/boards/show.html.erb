@@ -83,7 +83,13 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
 <% end %>
-  <div class="flex justify-center mt-10">
+
+<div class="flex justify-center mt-10">
+    <%= link_to "https://twitter.com/intent/tweet?url=https://journalip.com/&text= \n旅行の思い出を投稿しました #Journalip \n", target: "_blank", rel: "noopener" do %>
+    <p class="btn"><i class="fa-brands fa-x-twitter font-bold fa-lg"></i>で共有する</p>
+  <% end %>
+</div>
+<div class="flex justify-center mt-2">
   <%= link_to '一覧に戻る', boards_path, class: 'btn mt-3'%>
   </div>
 </div>
