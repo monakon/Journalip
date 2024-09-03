@@ -16,10 +16,10 @@
     <!-- mobile Menu -->
     <div class="text-xs md:hidden justify-center flex flex-col ml-auto">
       <details class="dropdown dropdown-end">
-        <summary tabindex="0" role="button" class="flex items-center py-5 px-3 text-sm rounded-lg hover:bg-gray-100">
-        <i class="fa-solid fa-bars fa-xl"></i>
+        <summary tabindex="0" role="button" class="btn m-1">
+          <i class="fa-solid fa-bars fa-xl"></i>
         </summary>
-          <ul tabindex="0" class="dropdown-content z-[2] menu p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li><%= link_to 'ログイン', login_path, class: "mr-4 hover:font-bold" %></li>
             <li><%= link_to '会員登録', users_new_path, class: "mr-4 hover:font-bold" %></li>
           </ul>
