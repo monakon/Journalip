@@ -10,7 +10,7 @@ module ApplicationHelper
     end
   end
 
-  # OGPで表示する具体的なサイト内容
+  # 基本的なOGPで表示する具体的なサイト内容
   def default_meta_tags
     {
       site: 'Journalip',
@@ -39,5 +39,24 @@ module ApplicationHelper
         image: image_url('Xcard.png'),
       }
     }
+  end
+
+  # 投稿記事毎の動的OGP（画像は固定）
+  def set_board_meta_tags(board, image_url)
+    set_meta_tags(
+      title: board.title,
+      description: "旅行の思い出を投稿しました！#{board.title}",
+      og: {
+        title: board.title,
+        description: "旅行の思い出を投稿しました！#{board.title}",
+        url: request.original_url,
+        image: image_url  # 固定画像
+      },
+      twitter: {
+        title: board.title,
+        description: "旅行の思い出を投稿しました！#{board.title}",
+        image: image_url # 固定画像
+      }
+    )
   end
 end
