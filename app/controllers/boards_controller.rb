@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  include ApplicationHelper
+
   before_action :set_board, only: %i[edit update destroy]
 
   def index
@@ -7,6 +9,10 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+
+    # 動的OGP
+    image_path = ActionController::Base.helpers.image_url('Xcard.png')
+    set_board_meta_tags(@board, image_path)
   end
 
   def new
