@@ -86,8 +86,8 @@
 
 <% if current_user && current_user.own?(@board) %>
   <div class="flex justify-center mt-10">
-    <% share_text ="旅行の思い出を投稿しました！\n\n【#{@board.title}】\n#Journalip\n" %>
-    <% share_url = "https://journalip.com/boards/#{@board.id}" %>
+    <% share_text = "旅行の思い出を投稿しました！\n\n【#{@board.title}】\n#Journalip\n" %>
+    <% share_url = board_url(@board) %>
       <%= link_to "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode(share_text)}&url=#{ERB::Util.url_encode(share_url)}", target: "_blank", rel: "noopener" do %>
       <p class="btn"><i class="fa-brands fa-x-twitter font-bold fa-lg"></i>で共有する</p>
       <% end %>
