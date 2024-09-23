@@ -53,6 +53,7 @@ module ApplicationHelper
         image: image_url  # 固定画像
       },
       twitter: {
+        card: 'summary_large_image',
         title: board.title,
         description: "旅行の思い出を投稿しました！#{board.title}",
         image: image_url # 固定画像
