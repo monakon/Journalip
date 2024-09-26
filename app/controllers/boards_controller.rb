@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   include ApplicationHelper
-  skip_before_action :require_login, only: %i[show]
+  skip_before_action :require_login, only: %i[index show]
   before_action :set_board, only: %i[edit update destroy]
 
   def index
