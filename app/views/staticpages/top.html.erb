@@ -14,6 +14,29 @@
       <p>Journalipなら思い出を簡単に振り返ることができます</p>
     </div>
 
+    <%# アプリ使い方 %>
+    <!-- Open the modal using ID.showModal() method -->
+  <div class="flex justify-center pt-10">
+    <button class="btn" onclick="my_modal_1.showModal()">アプリの使い方</button>
+      <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h4 class="text-lg font-bold">Journalipって？</h4>
+        <p class="py-4">旅行の振り返りを簡単に行えて、自分の価値観を発見できるアプリです。</p>
+        <h4 class="text-lg font-bold pt-4">使い方は？</h4>
+        <p class="pt-4">TOPページの最新記事から気になる記録を見ることができます。</p>
+        <p class="pb-4">会員登録をすると振り返り投稿機能を使えます。</p>
+        <h4 class="text-lg font-bold pt-4">誰が管理している？</h4>
+        <p class="py-4">このサービスは旅行が好きな人間「もなこ」が管理しています。</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">閉じる</button>
+          </form>
+        </div>
+      </div>
+      </dialog>
+  </div>
+
     <h2 class="mt-24 text-center text-2xl font-bold text-gray-800 mb-8 text-3xl">最新記事</h2>
 <%# ここにここに最新記事６つ表示する %>
   <% if @boards.present? %>
