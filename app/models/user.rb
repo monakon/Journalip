@@ -15,4 +15,17 @@ class User < ApplicationRecord
   def own?(object)
     object.user_id == id
   end
+
+  # Bookmark用メソッド
+  def bookmark(board)
+    bookmark_boards << board
+  end
+
+  def unbookmark(board)
+    bookmark_boards.destroy(board)
+  end
+
+  def bookmark?(board)
+    bookmark_boards.include?(board)
+  end
 end

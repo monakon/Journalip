@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create destroy]
   resources :boards do
     collection do
-      get 'mypage'
+      get :mypage
+      get :bookmarks
     end
   end
   resource :profiles
+  resources :bookmarks, only: %i[create destroy]
 
   post "oauth/callback", to: "oauths#callback"
   get "oauth/callback", to: "oauths#callback"
