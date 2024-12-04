@@ -11,7 +11,7 @@
         <%= link_to '削除', board_path(board), id: "button-delete-#{board.id}", data: {turbo_method: :delete, turbo_confirm: '削除しますか'} %>
         </div>
       <% else %>
-        <%= render 'bookmark_buttons', { board: board } %>
+        <%= render 'boards/bookmark_buttons', { board: board } %>
       <% end %>
       </div>
     </div>
