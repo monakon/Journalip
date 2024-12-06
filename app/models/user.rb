@@ -17,14 +17,18 @@ class User < ApplicationRecord
   end
 
   # Bookmark用メソッド
+
+  # 特定の掲示板をユーザーのブックマークに追加する
   def bookmark(board)
     bookmark_boards << board
   end
 
+  # 特定の掲示板をユーザーのブックマークから削除する
   def unbookmark(board)
     bookmark_boards.destroy(board)
   end
 
+  # 特定の掲示板がユーザーのブックマークに含まれているかを確認する
   def bookmark?(board)
     bookmark_boards.include?(board)
   end
