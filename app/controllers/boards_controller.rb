@@ -49,6 +49,9 @@ class BoardsController < ApplicationController
   def mypage
     # ログインユーザの投稿を取得
     @boards = current_user.boards
+
+    # ブックマーク一覧を取得 （一覧ページを別で作りたい場合はアクションとルーティングを設定）
+    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
   end
 
   private

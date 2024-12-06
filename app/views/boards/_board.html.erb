@@ -10,6 +10,8 @@
         <%= link_to '編集', edit_board_path(board), id: "button-edit-#{board.id}" %>
         <%= link_to '削除', board_path(board), id: "button-delete-#{board.id}", data: {turbo_method: :delete, turbo_confirm: '削除しますか'} %>
         </div>
+      <% else %>
+        <%= render 'boards/bookmark_buttons', { board: board } %>
       <% end %>
       </div>
     </div>

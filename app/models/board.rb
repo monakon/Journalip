@@ -1,6 +1,7 @@
 class Board < ApplicationRecord
   mount_uploader :board_image, BoardImageUploader
   belongs_to :user
+  has_many :bookmarks, dependent: :destroy
 
   # placeフィールドから緯度と経度を取得するためにgeocoderを設定
   geocoded_by :place
