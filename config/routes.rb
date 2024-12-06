@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :boards do
     collection do
       get :mypage
-      get :bookmarks
     end
   end
   resource :profiles
